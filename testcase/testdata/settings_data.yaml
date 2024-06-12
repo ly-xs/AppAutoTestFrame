@@ -1,0 +1,7 @@
+-
+  id: test_settings001.1
+  detail : 设置通知音量为7.0
+  screenshot : notification_volume
+  data :
+  check :
+    - 7.0

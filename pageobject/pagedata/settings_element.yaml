@@ -1,0 +1,21 @@
+testinfo:
+      - id: test_settings001
+        title: 调整音量
+testcase:
+      - element_info: //android.widget.TextView[@resource-id="android:id/title" and @text="Connected devices"]
+        find_type: xpath
+        info: 滑动Connected_devices
+        direction: up
+        duration: 400
+      - element_info: //android.widget.TextView[@resource-id="android:id/title" and @text="Sound & vibration"]
+        find_type: xpath
+        info: 点击Sound_and_vibration
+      - element_info: //android.widget.SeekBar[@content-desc="Notification volume"]
+        find_type: xpath
+        info: 改变Notification_volume
+        direction: right
+        duration: 200
+check:
+      - element_info: //android.widget.SeekBar[@content-desc="Notification volume"]
+        find_type: xpath
+        info: 音量已经调到7.0
