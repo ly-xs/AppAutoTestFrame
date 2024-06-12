@@ -29,8 +29,6 @@ class SettingsTestCase(unittest.TestCase):
     def test_settings(self, testdata):
         logger.info(f"当前执行测试用例ID-> {testdata['id']}; 测试点-> {testdata['detail']}")
         self.settings.settings_sound()
-        logger.info(type(self.settings.check_notification_volume()))
-        logger.info(type(testdata['check'][0]))
 
         self.assertEqual(float(self.settings.check_notification_volume()), testdata['check'][0],
                          f"返回实际结果是->: {self.settings.check_notification_volume()}")
